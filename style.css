@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  padding: 1rem;
+  font-family: 'Lato', sans-serif;
+  background-color: #f8f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span, input, button {
+  font-family: 'Lato', sans-serif;
+}
+
+svg {
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.share-btn {
+  padding: 1rem;
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 3px 6px;
+  appearance: none;
+  color: #323ac0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.share-btn:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 12px;
+}
+
+.share-btn svg {
+  stroke: #323ac0;
+}
+
+.close-btn {
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.close-btn svg {
+  stroke: #9ba2a4;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+dialog.copy-link {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+  border-radius: 0.75rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: none;
+  background-color: #fff;
+  animation: fadeInAnimation ease-in-out 0.5s forwards;
+}
+
+dialog.copy-link header {
+  min-height: 4rem;
+  padding: 1.5rem 2rem 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f3f3f4;
+}
+
+dialog.copy-link header h2 {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #1a1e1f;
+}
+
+dialog.copy-link.fadeout {
+  animation: fadeOutAnimation ease-in-out 0.5s forwards;
+}
+
+.copy-link.content {
+  padding: 2rem;
+}
+
+.copy-link-wrapper {
+  padding: 0.25rem;
+  padding-left: 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  color: #252728;
+  background-color: #f3f3f4;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy-link-wrapper input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #6d7679;
+  background-color: inherit;
+}
+
+.copy-link-wrapper input::selection {
+  background-color: #323ac0;
+  color: #fff;
+}
+
+.copy-btn {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  border-radius: 0.4rem;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 3px 6px;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
